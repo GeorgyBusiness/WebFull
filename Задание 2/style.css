@@ -2,6 +2,7 @@ header{
   background-color: #D8BFD8;
   margin: -10px;
   padding: 0;
+  display: flex;
 }
 .logo {
     float: left;
