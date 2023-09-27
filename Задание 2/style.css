@@ -1,6 +1,6 @@
 header{
   background-color: #D8BFD8;
-  margin: -10px;
+  margin: 0;
   padding: 0;
   display: flex;
 }
@@ -25,7 +25,7 @@ header{
   }
   .shapka li {
     display: inline-block;
-    margin-left: 10px; /*способ разместить элементы в строку*/
+    margin-left: 10px; 
   }
   .container:after { 
     content: "";
@@ -34,7 +34,6 @@ header{
   }
   .container {
     width: 100%;
-    max-width: 1024px;
     padding: 15px;
     margin: 0 auto;
   }
@@ -45,7 +44,6 @@ header{
   }
   .container body {
     float:left;
-    max-width: 960px;
   }
   .container body{
     width: 100%;
