@@ -6,10 +6,8 @@
     <title>Задание 2</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <header>
-    <div class="container">
       <a href="#" class="logo"> <img src="image0.png" width="50" height="50" alt="logo"></a>
       <a href="#" class="title">Мой сайт</a>
       <nav class="shapka">
@@ -21,13 +19,12 @@
           <li><a href="#a1">Форма</a></li>
         </ul>
       </nav>
-    </div>
   </header>
-</header>
-<div class="main">
-  <div class="container body">
-    <nav class="spisok">
-      <ul>
+  <center>
+  <div class="main">
+    <div class="container">
+      <nav class="spisok">
+        <ul>
           <li><a href="http://kubsu.ru/">Абсолютная гипрессылка на главную страницу сайта KUBSU</a></li>
           <li><a href="https://kubsu.ru/">Абсолютная гиперссылка на главную страницу сайта KUBSU в протоколе https</a></li>
           <li><a href="http://www.youtube.com/"><img src ="image.jpg" width="250"
@@ -54,17 +51,16 @@
           <li><a>Ссылка без href</a></li>
           <li><a href="./page2.html" rel="nofollow"> Ссылка по которой запрещен переход поисковикам</a></li>
           <li><a href="./page2.html" rel="nofollow"><noindex>Ссылка запрещенная для индексации</noindex></a></li>
-      </ul>
-      <ol>
+        </ul>
+        <ol>
           <li><a href="https://uslugi.yandex.ru/" title="Яндекс Услуги"> Услуги</a></li>
           <li><a href="https://taxi.yandex.ru/" title="Яндекс Такси">Такси</a></li>
           <li><a href="https://eda.yandex.ru/" title="Яндекс Еда">Еда</a></li>
-      </ol>
-    </nav>
-    <table>
-            <caption id="a2">Таблица</caption>
-            <thead>
-            <tr>
+        </ol>
+      </nav>
+      <table>
+        <caption id="a2">Таблица</caption>
+        <tr>
               <th>Имя</th>
               <th>Фамилия</th>
               <th>Страна</th>
@@ -90,7 +86,7 @@
               <td>Нью-Йорк</td>
             </tr>
             <tr>
-              <td>Виталий</td>
+              <td colspan ="2">Виталий</td>
               <td>Цаль</td>
               <td>Украина</td>
               <td>Винница</td>
@@ -107,81 +103,60 @@
               <td>Украина</td>
               <td>Львов</td>
             </tr>
-          </tbody>
-    </table>
-    <h1 id ="a1">ФОРМА ДЛЯ ЗАПОЛНЕНИЯ:</h1>
-
-        <form action="/"
-          method="POST">
-
-          <label>
-            Фио<br />
-            <input name="field-name-1"
-              placeholder="Я Такой-то Такой-то" />
-          </label><br />
-
-          <label>
+      </tbody>
+      </table>
+      <h2 id="a1">Форма:</h2>
+      <form action="/" method="POST">
+      <label>
+        ФИО:<br />
+        <input type="text" name="student_name" placeholder="Иванов Иван Иванович">
+      </label><br />
+      <label>
         Номер телефона:<br />
         <input type="number" name="student_pnone">
-       </label><br />
-
-          <label>
-            Введите почту:<br />
-            <input name="field-email"
-              type="email"
-              placeholder="test@example.com" />
-          </label><br />
-
-          <label>
-            Дата рождения:<br />
-            <input name="field-date"
-              value="2019-08-13"
-              type="date" />
-          </label><br />
-
-          Пол:<br />
-          <label><input type="radio" checked="checked"
-            name="radio-group-1" value="Значение1" />
-            Муж</label>
-          <label><input type="radio"
-            name="radio-group-1" value="Значение2" />
-            Жен</label><br />
-
-            <label>
-              Любимый язык программирования:
-              <br />
-              <select name="PL" multiple="multiple">
-                <option value="Pascal">Pascal</option>
-                <option value="C">C</option>
-                <option value="C++">C++</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="PHP">PHP</option>
-                <option value="Python">Python</option>
-                <option value="Haskel">Haskel</option>
-                <option value="Clojure">Clojure</option>
-                <option value="Prolog">Prolog</option>
-                <option value="Scala">Scala</option>
-              </select>
-            </label><br />
-
-          <label>
-            Биография<br />
-            <textarea name="field-name-2">Расскажите о себе...</textarea>
-          </label><br />
-
-          <br />
-          <label><input type="checkbox" checked="checked"
-            name="check-1" />
-            С контрактом ознакомлен (а)</label><br />
-
-          <input type="submit" value="Сохранить" />
-        </form>
-  </div>
-</div>
-    <footer>
-      2023 Марченко Георгий 27/2
-    </footer>
-
-
-</body>
-</html>
+      </label><br />
+      <label>
+        Email:<br />
+        <input type="email" name="email" placeholder="Введите вашу почту">
+      </label><br />
+      <label>
+        Дата рождения:<br />
+        <input type="date" name="date">
+      </label><br />
+      <label>
+        Пол:<br />
+          <input name=sex type="radio" value="male">
+          Мужской</label>
+      <label>
+          <input name=sex type="radio" value="female">
+          Женский</label> <br />
+      <label>
+        Любимый язык программирования: <br>
+        <select name="PL[]" multiple="multiple">
+            <option value="Pascal">Pascal</option>
+            <option value="C">C</option>
+            <option value="C++">C++</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="PHP">PHP</option>
+            <option value="Python">Python</option>
+            <option value="Haskel">Haskel</option>
+            <option value="Clojure">Clojure</option>
+            <option value="Prolog">Prolog</option>
+            <option value="Scala">Scala</option>
+        </select>
+      </label><br />
+      <label>
+        Биография:<br />
+        <textarea name="student_bio"></textarea>
+      </label><br />
+      <label> С контрактом ознакомлен(а):<input type="checkbox" name="check"></label><br />
+      <input type="submit" value="Сохранить">
+      </form>
+        </div>
+      </div>
+    </center>
+      <footer>
+        2023 Марченко Георгий 27/2
+      </footer>
+    </body>
+    </html>
